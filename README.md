@@ -18,6 +18,8 @@ This action generates a self-signed certificate
 
 ## Example usage
 
+```
 uses: actions/action-create-certificate@v1
 with:
   hostcert: 'hostcert.pem'
+```
