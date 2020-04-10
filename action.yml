@@ -10,7 +10,7 @@ inputs:
       description: 'File to store host key'
       required: true
       default: 'hostkey.pem'
-  chain:
+  cachain:
       description: 'File to store CA chain'
       required: true
       default: 'ca-chain.pem'
@@ -23,4 +23,4 @@ runs:
   args:
     - ${{ inputs.hostcert }}
     - ${{ inputs.hostkey }}
-    - ${{ inputs.cain }}
+    - ${{ inputs.cacain }}

@@ -12,14 +12,14 @@ This action generates a self-signed certificate
 
 **Required** The file where to store the host key. Defaults to `hostkey.pem`
 
-## Outputs
+### `cachain`
 
-
-
-## Example usage
+**Required** The file where to store CA chain. Defaults to `ca-chain.pem`
 
 ```
 uses: actions/action-create-certificate@v1
 with:
   hostcert: 'hostcert.pem'
+  hostkey:  'hostkey.pem'
+  cachain: 'ca-chain.pem'
 ```
