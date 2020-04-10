@@ -18,7 +18,7 @@ during test phase.
 - **Required** The file where to store CA chain. Defaults to `ca-chain.pem`
 
 ```
-uses: actions/action-create-certificate@v0.0.1
+uses: kofemann/action-create-certificate@v0.0.1
 with:
   hostcert: 'hostcert.pem'
   hostkey:  'hostkey.pem'
