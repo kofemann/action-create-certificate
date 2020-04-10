@@ -26,4 +26,4 @@ runs:
   args:
     - ${{ inputs.hostcert }}
     - ${{ inputs.hostkey }}
-    - ${{ inputs.cacain }}
+    - ${{ inputs.cachain }}
