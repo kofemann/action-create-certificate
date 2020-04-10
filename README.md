@@ -1,4 +1,4 @@
-# Self signed certificate docker action
+# Self signed certificate GitHub action
 
 [![GitHub Releases](https://img.shields.io/github/v/release/kofemann/action-create-certificate.svg)](https://github.com/kofemann/action-create-certificate/releases)
 
