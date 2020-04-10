@@ -1,6 +1,9 @@
 # action.yml
 name: 'Self-signed CA'
 description: 'Create self signed CA for testing'
+branding:
+  icon: 'lock'
+  color: 'orange'
 inputs:
   hostcert:
       description: 'File to store host certificate'
