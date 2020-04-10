@@ -17,12 +17,26 @@ during test phase.
 
 - **Required** The file where to store CA chain. Defaults to `ca-chain.pem`
 
-```
-uses: kofemann/action-create-certificate@v0.0.1
-with:
-  hostcert: 'hostcert.pem'
-  hostkey:  'hostkey.pem'
-  cachain: 'ca-chain.pem'
+```yaml
+name: test with self signed certificate
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate certificates for next step
+        uses: kofemann/action-create-certificate@v0.0.2
+
+        with:
+          hostcert: 'hostcert.pem'
+          hostkey:  'hostkey.pem'
+          cachain:  'ca-chain.pem'
+
+      - name: Use generated certificates
+        run: |
+            openssl x509 -in hostcert.pem -noout -text
 ```
 
 ## License
