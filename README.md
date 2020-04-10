@@ -41,6 +41,10 @@ jobs:
             openssl x509 -in hostcert.pem -noout -text
 ```
 
+## Acknowledgement
+
+This work is based on [Nick Sullivan, Cloudflare](https://blog.cloudflare.com/how-to-build-your-own-public-key-infrastructure/) and [Johannes Tegnér](https://jite.eu/2019/2/6/ca-with-cfssl/) blog posts.
+
 ## License
 
 Licensed under BSD 2-Clause “Simplified” License
