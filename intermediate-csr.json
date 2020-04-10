@@ -1,0 +1,17 @@
+{
+    "CN": "GitHub Action Testing Signing CA",
+    "hosts": [""],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "DE",
+            "ST": "Hamburg",
+            "L": "Hamburg",
+            "O": "GitHub",
+            "OU": "Actions"
+        }
+    ]
+}
