@@ -1,5 +1,9 @@
 #!/bin/sh
 
+CERT_FILE=$1
+KEY_FILE=$2
+CHAIN_FILE=$3
+
 ACC_HOME=/opt/acc
 LOG=-loglevel=4
 
@@ -22,6 +26,11 @@ cfssl gencert $LOG -ca ${ACC_HOME}/ca/signing-ca.pem -ca-key ${ACC_HOME}/ca/sign
 
 
 # CA-cain
-cat ${ACC_HOME}/ca/root-ca.pem ${ACC_HOME}/ca/signing-ca.pem > ${ACC_HOME}/out/ca-chain.pem
+cat ${ACC_HOME}/ca/root-ca.pem ${ACC_HOME}/ca/signing-ca.pem > ${ACC_HOME}/out/${CHAIN_FILE}
+mv ${ACC_HOME}/out/host.pem ${ACC_HOME}/out/${CERT_FILE}
+mv ${ACC_HOME}/out/host-key.pem ${ACC_HOME}/out/${KEY_FILE}
 
-exec /bin/bash
+if [ ! -z $GITHUB_WORKSPACE ]
+then
+  cp ${ACC_HOME}/out/${CERT_FILE} ${ACC_HOME}/out/${KEY_FILE} ${ACC_HOME}/out/${CHAIN_FILE} $GITHUB_WORKSPACE
+fi

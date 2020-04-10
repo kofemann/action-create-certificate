@@ -3,13 +3,17 @@ name: 'Self-signed CA'
 description: 'Create self signed CA for testing'
 inputs:
   hostcert:
-    description: 'File to store host certificate'
-    required: true
-    default: 'hostcert.pem'
-    hostkey:
-        description: 'File to store host key'
-        required: true
-        default: 'hostkey.pem'
+      description: 'File to store host certificate'
+      required: true
+      default: 'hostcert.pem'
+  hostkey:
+      description: 'File to store host key'
+      required: true
+      default: 'hostkey.pem'
+  chain:
+      description: 'File to store CA chain'
+      required: true
+      default: 'ca-chain.pem'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -17,4 +21,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.hostcert }}
+    - ${{ inputs.hostkey }}
+    - ${{ inputs.cain }}

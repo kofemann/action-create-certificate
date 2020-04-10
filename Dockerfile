@@ -12,5 +12,7 @@ COPY signing-ca-cert-config.json /opt/acc/etc/signing-ca-cert-config.json
 COPY entrypoint.sh /entrypoint.sh
 
 
-
 ENTRYPOINT ["/entrypoint.sh"]
+
+# for testing. Action will overwrite
+CMD ["hostcert.pem", "hostkey.pem", "ca-chain.pem"]
