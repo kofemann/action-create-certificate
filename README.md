@@ -24,3 +24,7 @@ with:
   hostkey:  'hostkey.pem'
   cachain: 'ca-chain.pem'
 ```
+
+## License
+
+Licensed under BSD 2-Clause “Simplified” License
