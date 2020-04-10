@@ -1,5 +1,7 @@
 # Self signed certificate docker action
 
+[![GitHub Releases](https://img.shields.io/github/v/release/kofemann/action-create-certificate.svg)](https://github.com/kofemann/action-create-certificate/releases)
+
 This action generates a self-signed certificate that can be used
 during test phase.
 
