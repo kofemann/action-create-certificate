@@ -1,4 +1,4 @@
-FROM cfssl/cfssl:latest
+FROM docker.pkg.github.com/cloudflare/cfssl/cfssl:1.4.1
 
 RUN mkdir -p /opt/acc/etc /opt/acc/ca /opt/acc/out
 
