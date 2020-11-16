@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Generate certificates for next step
-        uses: kofemann/action-create-certificate@v0.0.2
+        uses: kofemann/action-create-certificate@v0.0.4
 
         with:
           hostcert: 'hostcert.pem'
